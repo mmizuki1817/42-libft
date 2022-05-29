@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:42:26 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 03:58:06 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 04:24:18 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,15 @@ char	*strnstr_main(const char *big, const char *little, size_t len, size_t n)
 	size_t	len_little;
 
 	len_little = ft_strlen(little);
-	while (n-- > 0)
+	while (n--)
 	{
 		i = 0;
 		while (little[i] != '\0')
 		{
-			if ((len + 1) == 1)
-				return (NULL);
 			len--;
 			if (*big == little[i])
 			{
-				if (i == len_little - 1)
+				if (i + 1 == len_little)
 					return ((char *)(big - i));
 				big++;
 				i++;
