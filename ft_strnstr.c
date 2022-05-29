@@ -23,6 +23,8 @@ char	*strnstr_main(const char *big, const char *little, size_t len, size_t n)
 		i = 0;
 		while (little[i] != '\0')
 		{
+			if (len == 0)
+				return (NULL);
 			len--;
 			if (*big == little[i])
 			{
