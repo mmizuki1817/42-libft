@@ -80,7 +80,7 @@ char	**split_cpy(char const *s, char c, char **p)
 	p[size] = malloc(sizeof(char) * (1));
 	if (!p[size])
 		return (m_free(p, size));
-	p[size] = "\0";
+	p[size] = NULL;
 	return (p);
 }
 
@@ -100,7 +100,7 @@ char	**ft_split(char const *s, char c)
 		p[0] = malloc(sizeof(char) * 1);
 		if (p[0] == NULL)
 			return (m_free(p, 0));
-		p[0] = "\0";
+		p[0] = NULL;
 		return (p);
 	}
 	p = malloc(sizeof(char *) * (count + 1));
