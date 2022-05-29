@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:42:26 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 01:55:41 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 03:58:06 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	len_little;
 	size_t	len_big;
 
-	if (!big || !little)
+	if (!little)
+		return ((char *)big);
+	if (!big)
 		return (NULL);
 	len_little = ft_strlen(little);
 	len_big = ft_strlen(big);
@@ -61,8 +63,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 /*
 #include <string.h>
+#include <stdio.h>
 int main(void)
 {
-	strstr(NULL, "1");
+	char *s;
+	char *little;
+	printf("%s", ft_strnstr(s, little, 10));
 }
 */
