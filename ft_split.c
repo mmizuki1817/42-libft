@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 19:19:47 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/29 20:39:08 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 05:18:09 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,6 @@ size_t	count_word(char const *s, char c)
 			return (0);
 		return (1);
 	}
-	// if (c == '\0' || s[0] == '\0')
-	// {
-	// 	count = 1;
-	// 	return (count);
-	// }
 	while (s[i] == c)
 		i++;
 	if (s[i] != '\0')
@@ -53,6 +48,14 @@ char	**m_free(char **p, size_t size)
 	return (NULL);
 }
 
+char	**p_malloc(char **p, size_t size, size_t len)
+{
+	p[size] = malloc(sizeof(char) * (len + 1));
+	if (!p[size])
+		return (m_free(p, size));
+	return (p);
+}
+
 char	**split_cpy(char const *s, char c, char **p)
 {
 	size_t	len;
@@ -69,9 +72,7 @@ char	**split_cpy(char const *s, char c, char **p)
 		}
 		if (len != 0)
 		{
-			p[size] = malloc(sizeof(char) * (len + 1));
-			if (!p[size])
-				return (m_free(p, size));
+			p = p_malloc(p, size, len);
 			ft_strlcpy(p[size++], s - len, len + 1);
 		}
 		while (*s == c && c != '\0')
