@@ -6,13 +6,14 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:42:26 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 04:24:18 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 21:29:42 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr_main(const char *big, const char *little, size_t len, size_t n)
+static char	*strnstr_main(const char *big, const char *little, \
+size_t len, size_t n)
 {
 	size_t	i;
 	size_t	len_little;

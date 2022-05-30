@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 18:26:52 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 00:08:10 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 21:24:00 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (ft_strlen(s) < start + 1)
 	{
-		p = malloc(sizeof(char) * 1);
+		p = (char)malloc(sizeof(char) * 1);
 		if (p == NULL)
 			return (NULL);
 		*p = '\0';
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	while (start-- > 0)
 		s++;
-	p = malloc(sizeof(char) * (len + 1));
+	p = (char)malloc(sizeof(char) * (len + 1));
 	if (p == NULL)
 		return (NULL);
 	ft_strlcpy(p, s, (len + 1));

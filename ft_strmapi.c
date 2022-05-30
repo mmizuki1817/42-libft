@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:58:55 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/29 23:45:02 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 21:22:57 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (0);
-	p = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	p = (char)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (p == NULL)
 		return (NULL);
 	i = 0;

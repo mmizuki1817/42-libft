@@ -6,13 +6,13 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 16:59:15 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 00:02:13 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 21:04:26 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digit(long n)
+static int	count_digit(long n)
 {
 	int	count;
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 
 	li = (long)n;
 	count = count_digit(li);
-	buffer = malloc(sizeof(char) * (count + 1));
+	buffer = (char *)malloc(sizeof(char) * (count + 1));
 	if (buffer == NULL)
 		return (NULL);
 	buffer[count--] = '\0';

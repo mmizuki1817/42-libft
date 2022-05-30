@@ -6,13 +6,13 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 03:06:05 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 01:43:03 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 22:41:16 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*front(char *s, const char *set)
+static char	*front(char *s, const char *set)
 {
 	size_t	i;
 
@@ -35,7 +35,7 @@ char	*front(char *s, const char *set)
 	return (s);
 }
 
-char	*end(char *s, const char *set)
+static char	*end(char *s, const char *set)
 {
 	size_t	i;
 	char	*tmp;

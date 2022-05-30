@@ -6,13 +6,13 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 19:19:47 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 05:18:09 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 21:20:32 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_word(char const *s, char c)
+static size_t	count_word(char const *s, char c)
 {
 	size_t	count;
 	size_t	i;
@@ -38,25 +38,27 @@ size_t	count_word(char const *s, char c)
 	return (count);
 }
 
-char	**m_free(char **p, size_t size)
+static char	**m_free(char **p, size_t size)
 {
 	while (size--)
 	{
 		free(p[size]);
+		p[size] = NULL;
 	}
 	free(p);
+	p = NULL;
 	return (NULL);
 }
 
-char	**p_malloc(char **p, size_t size, size_t len)
+static char	**p_malloc(char **p, size_t size, size_t len)
 {
-	p[size] = malloc(sizeof(char) * (len + 1));
+	p[size] = (char)malloc(sizeof(char) * (len + 1));
 	if (!p[size])
 		return (m_free(p, size));
 	return (p);
 }
 
-char	**split_cpy(char const *s, char c, char **p)
+static char	**split_cpy(char const *s, char c, char **p)
 {
 	size_t	len;
 	size_t	size;
@@ -73,14 +75,13 @@ char	**split_cpy(char const *s, char c, char **p)
 		if (len != 0)
 		{
 			p = p_malloc(p, size, len);
+			if (p == NULL)
+				return (NULL);
 			ft_strlcpy(p[size++], s - len, len + 1);
 		}
 		while (*s == c && c != '\0')
 			s++;
 	}
-	p[size] = malloc(sizeof(char) * (1));
-	if (!p[size])
-		return (m_free(p, size));
 	p[size] = NULL;
 	return (p);
 }
@@ -93,18 +94,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	count = count_word(s, c);
-	if (count == 0)
-	{
-		p = malloc (sizeof(char *) * 1);
-		if (p == NULL)
-			return (NULL);
-		p[0] = malloc(sizeof(char) * 1);
-		if (p[0] == NULL)
-			return (m_free(p, 0));
-		p[0] = NULL;
-		return (p);
-	}
-	p = malloc(sizeof(char *) * (count + 1));
+	p = (char *)malloc(sizeof(char *) * (count + 1));
 	if (!p)
 		return (NULL);
 	return (split_cpy(s, c, p));

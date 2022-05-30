@@ -6,13 +6,13 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 19:53:06 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/26 20:16:04 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/05/30 22:41:06 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	calculate(const char *str, char pn)
+static long	calculate(const char *str, char pn)
 {
 	long	num;
 
