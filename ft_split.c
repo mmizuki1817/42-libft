@@ -52,7 +52,7 @@ static char	**m_free(char **p, size_t size)
 
 static char	**p_malloc(char **p, size_t size, size_t len)
 {
-	p[size] = (char)malloc(sizeof(char) * (len + 1));
+	p[size] = (char *)malloc(sizeof(char) * (len + 1));
 	if (!p[size])
 		return (m_free(p, size));
 	return (p);
@@ -94,7 +94,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	count = count_word(s, c);
-	p = (char *)malloc(sizeof(char *) * (count + 1));
+	p = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!p)
 		return (NULL);
 	return (split_cpy(s, c, p));
