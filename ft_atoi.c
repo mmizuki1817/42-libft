@@ -25,8 +25,11 @@ static long	calculate(const char *str, char pn)
 				num = num * (-1);
 			return ((int)num);
 		}
-		num = num * 10;
-		num = num + (*str - '0');
+		if (pn == '+' && (num > LONG_MAX / 10 || ((*str - '0') > 7 && num == LONG_MAX / 10))) // 切り捨て
+			return ((int)LONG_MAX);
+		else if (pn == '-' && (num > LONG_MAX / 10 || ( (*str - '0') > 8 && num == LONG_MAX / 10)))
+			 return ((int)LONG_MIN);
+		num = num * 10 + (*str - '0');
 		str++;
 	}
 	if (pn == '-')
@@ -54,6 +57,9 @@ int	ft_atoi(const char *str)
 	return ((int)num);
 }
 
+// LONG_MAX = +9,223,372,036,854,775,807	
+// LONG_MIN = –9,223,372,036,854,775,808
+	
 /*
 #include <stdio.h>
 #include <stdlib.h>
