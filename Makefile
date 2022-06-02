@@ -6,12 +6,12 @@
 #    By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/11 16:27:51 by mimatsub          #+#    #+#              #
-#    Updated: 2022/05/13 06:51:20 by mimatsub         ###   ########.fr        #
+#    Updated: 2022/06/02 23:33:33 by mimatsub         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 

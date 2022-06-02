@@ -6,11 +6,11 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 22:52:32 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/06/02 22:52:32 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/02 23:27:47 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 static char	*strnstr_main(const char *big, const char *little, \
 size_t len, size_t n)

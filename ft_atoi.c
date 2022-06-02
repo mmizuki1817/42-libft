@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 19:53:06 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 22:41:06 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/02 23:29:41 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ static long	calculate(const char *str, char pn)
 				num = num * (-1);
 			return ((int)num);
 		}
-		if (pn == '+' && (num > LONG_MAX / 10 || ((*str - '0') > 7 && num == LONG_MAX / 10))) // 切り捨て
+		if (pn == '+' && \
+		(num > LONG_MAX / 10 || ((*str - '0') > 7 && num == LONG_MAX / 10)))
 			return ((int)LONG_MAX);
-		else if (pn == '-' && (num > LONG_MAX / 10 || ( (*str - '0') > 8 && num == LONG_MAX / 10)))
-			 return ((int)LONG_MIN);
+		else if (pn == '-' && \
+		(num > LONG_MAX / 10 || ((*str - '0') > 8 && num == LONG_MAX / 10)))
+			return ((int)LONG_MIN);
 		num = num * 10 + (*str - '0');
 		str++;
 	}
@@ -57,10 +59,10 @@ int	ft_atoi(const char *str)
 	return ((int)num);
 }
 
+/*
 // LONG_MAX = +9,223,372,036,854,775,807	
 // LONG_MIN = –9,223,372,036,854,775,808
-	
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 int main(void)
