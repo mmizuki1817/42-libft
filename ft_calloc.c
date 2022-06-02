@@ -20,8 +20,6 @@ void	*ft_calloc(size_t n, size_t size)
 	if (size != 0 && SIZE_MAX / size < n)
 		return (NULL);
 	ms = n * size;
-	if (ms == 0)
-		ms = 1;
 	buf = (void *)malloc(ms);
 	if (buf == NULL)
 		return (NULL);
