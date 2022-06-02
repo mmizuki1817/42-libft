@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
-# include <limits.h>
 
 int		ft_isalpha(int ch);
 
