@@ -43,27 +43,27 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 /*
 int main(void)
 {
-	printf("%sa", ft_strnstr(NULL, "he", 1)); //segfa
-	printf("%sb", strnstr(NULL, "he", 1)); //segfa
+	printf("%sa", ft_strlcat(NULL, "he", 1)); //segfa
+	printf("%sb", strlcat(NULL, "he", 1)); //segfa
 
-	printf("%sc", ft_strnstr(NULL, "he", 0)); //null
-	printf("%sd", strnstr(NULL, "he", 0)); //null
+	printf("%sc", ft_strlcat(NULL, "he", 0)); //2
+	printf("%sd", strlcat(NULL, "he", 0)); //2
 
-	printf("%se", ft_strnstr("he", NULL, 2)); //segfa
-	printf("%sf", strnstr("he", NULL, 2)); //segfa
-
-
-	printf("%se", ft_strnstr("he", NULL, 5)); //segfa
-	printf("%sf", strnstr("he", NULL, 5)); //segfa
-
-	printf("%sg", ft_strnstr("he", NULL, 0)); //segfa
-	printf("%sh", strnstr("he", NULL, 0)); //segfa
-
-	printf("%si", ft_strnstr(NULL, NULL, 5)); //segfa
-	printf("%sj", strnstr(NULL, NULL, 5)); //segfa
+	printf("%se", ft_strlcat("he", NULL, 2)); //segfa
+	printf("%sf", strlcat("he", NULL, 2)); //segfa
 
 
-	printf("%sk", ft_strnstr(NULL, NULL, 0)); //segfa
-	printf("%sl", strnstr(NULL, NULL, 0)); //segfa
+	printf("%se", ft_strlcat("he", NULL, 5)); //segfa
+	printf("%sf", strlcat("he", NULL, 5)); //segfa
+
+	printf("%sg", ft_strlcat("he", NULL, 0)); //segfa
+	printf("%sh", strlcat("he", NULL, 0)); //segfa
+
+	printf("%si", ft_strlcat(NULL, NULL, 5)); //segfa
+	printf("%sj", strlcat(NULL, NULL, 5)); //segfa
+
+
+	printf("%sk", ft_strlcat(NULL, NULL, 0)); //segfa
+	printf("%sl", strlcat(NULL, NULL, 0)); //segfa
 }
 */
