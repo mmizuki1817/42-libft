@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 03:33:05 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/11 01:37:24 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/03 20:52:52 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s == NULL || fd < 0)
+	if (s == NULL)
 		return ;
 	while (*s)
 		write(fd, s++, 1);

@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 19:53:06 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/06/02 23:29:41 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/04 05:51:09 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,8 @@ static long	calculate(const char *str, char pn)
 	long	num;
 
 	num = 0;
-	while (*str != '\0')
+	while (ft_isdigit(*str))
 	{
-		if (!('0' <= *str && *str <= '9'))
-		{
-			if (pn == '-')
-				num = num * (-1);
-			return ((int)num);
-		}
 		if (pn == '+' && \
 		(num > LONG_MAX / 10 || ((*str - '0') > 7 && num == LONG_MAX / 10)))
 			return ((int)LONG_MAX);
@@ -114,5 +108,9 @@ int main(void)
 	char *s8 = " - 3.54";
 	printf("9:%i\n", atoi(s8));
 	printf("9:%i\n", ft_atoi(s8));
+
+	char *s9 = " -0019";
+	printf("10:%i\n", atoi(s9));
+	printf("10:%i\n", ft_atoi(s9));
 }
 */

@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 19:18:49 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/11 16:50:04 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/04 05:55:18 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,12 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+/*
+#include <stdio.h>
+int main(void)
+{
+	char *s = "hello";
+	printf("%s\n", ft_strrchr(s, '\0'));
+}
+*/

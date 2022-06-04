@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 13:49:24 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 22:41:26 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/04 19:12:15 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,12 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *buf1, const void *buf2, size_t n);
 
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+
+int	    ft_atoi(const char *str);
+
+void	*ft_calloc(size_t n, size_t size);
+
+char	*ft_strdup(const char *s);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
