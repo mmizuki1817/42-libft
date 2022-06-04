@@ -19,11 +19,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	buf1 = (unsigned char *)s1;
 	buf2 = (unsigned char *)s2;
-	while (n > 0)
+	while (n--)
 	{
-		if (*buf1 != *buf2)
+		if (*buf1 != *buf2 || *buf1 == '\0' || *buf2 == '\0')
 			return (*buf1 - *buf2);
-		n--;
 		buf1++;
 		buf2++;
 	}
