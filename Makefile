@@ -6,13 +6,12 @@
 #    By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/11 16:27:51 by mimatsub          #+#    #+#              #
-#    Updated: 2022/06/03 22:34:35 by mimatsub         ###   ########.fr        #
+#    Updated: 2022/06/05 02:30:32 by mimatsub         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-NORM	=	norminette -R CheckForbiddenSourceHeader
 
 NAME = libft.a
 

@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 18:26:52 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/06/04 22:50:08 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/05 02:29:24 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (s_len <= len)
 		return (ft_strdup(s));
-	else 
+	else
 	{
 		p = (char *)malloc(sizeof(char) * (len + 1));
 		if (p == NULL)

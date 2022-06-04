@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 03:06:05 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/06/05 02:00:44 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/05 02:29:06 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	*front(char *s, const char *set)
 static char	*end(char *s, const char *set)
 {
 	size_t	len;
-	char *tmp;
+	char	*tmp;
 
 	len = ft_strlen(s);
 	tmp = s + len - 1;
