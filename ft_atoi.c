@@ -14,7 +14,7 @@
 
 static long	calculate(const char *str, char pn)
 {
-	long	num;
+	long long	num;
 
 	num = 0;
 	while (ft_isdigit(*str))
