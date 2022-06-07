@@ -23,10 +23,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (p == NULL)
 		return (NULL);
 	i = 0;
-	while (s[i])
+	while (*s)
 	{
 		p[i] = f(i, s[i]);
 		i++;
+		s++;
 	}
 	p[i] = '\0';
 	return (p);
