@@ -32,3 +32,21 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	p[i] = '\0';
 	return (p);
 }
+
+/*
+char F(unsigned int i, char ch){
+	ch += 1;
+	return (ch);
+}
+
+int mian(voi){
+	char *p;
+	p = malloc((size_t)UINT_MAX + 10);
+	ft_memset(p, 'a', (size_t)UINT_MAX + 10);
+	p[(size_t)UINT_MAX + 10] = '\0';
+	ft_strmapi(p. F);
+}
+
+// 31: if (i % 100000000 == 0)
+// 32: printf("loop%u", i);
+*/
