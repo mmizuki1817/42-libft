@@ -6,7 +6,7 @@
 /*   By: mimatsub <mimatsub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 21:58:55 by mimatsub          #+#    #+#             */
-/*   Updated: 2022/05/30 21:22:57 by mimatsub         ###   ########.fr       */
+/*   Updated: 2022/06/09 01:39:15 by mimatsub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
-	char			*p;
+	char	*p;
 
 	if (!s || !f)
 		return (0);
