@@ -20,10 +20,10 @@ static long	calculate(const char *str, char pn)
 	while (ft_isdigit(*str))
 	{
 		if (pn == '+' && \
-		(num > LLONG_MAX / 10 || ((*str - '0') > 7 && num == LONG_MAX / 10)))
+		(num > LLONG_MAX / 10 || ((*str - '0') > 7 && num == LLONG_MAX / 10)))
 			return ((int)LONG_MAX);
 		else if (pn == '-' && \
-		(num > LLONG_MAX / 10 || ((*str - '0') > 8 && num == LONG_MAX / 10)))
+		(num > LLONG_MAX / 10 || ((*str - '0') > 8 && num == LLONG_MAX / 10)))
 			return ((int)LONG_MIN);
 		num = num * 10 + (*str - '0');
 		str++;
